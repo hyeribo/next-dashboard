@@ -14,6 +14,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
 
     // URLSearchParams: 쿼리 스트링 관리 Web API
     const params = new URLSearchParams(searchParams);
+    params.set("page", "1");
     if (term) {
       params.set("query", term);
     } else {
